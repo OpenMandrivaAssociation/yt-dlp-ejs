@@ -17,7 +17,8 @@ BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(hatch-vcs)
 BuildRequires:  python3dist(hatchling)
-BuildRequires:  (quickjs or quikcjs-ng or deno or bun or nodejs)
+#BuildRequires:  (quickjs or quikcjs-ng or deno or bun or nodejs)
+BuildReqires:	quickjs
 # Recommended is deno but is rust based and currently not packaged for OMV, so lets pick at first quickjs
 Requires:  (quickjs or quickjs-ng or deno or bun or nodejs)
 
