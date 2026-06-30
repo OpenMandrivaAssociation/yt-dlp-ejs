@@ -1,2 +1,4 @@
 sources:
-  yt_dlp_ejs-0.3.1.tar.gz: ebd3362e7b0142eeec0d11b24a4c9b1133065f94
+  yt_dlp_ejs-0.8.0.tar.gz: 7157cb71bb4ddb4f3031aa3da1b5757014b9515b
+  yt.solver.core.min.js: 898cad1fed7b2ee598244a1b8bf389da4050f5b0
+  yt.solver.lib.min.js: 25b1dc7ea75d732dd46a479c75409bc81c96c5bc
