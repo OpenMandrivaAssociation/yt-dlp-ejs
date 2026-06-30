@@ -32,6 +32,8 @@ External JavaScript for yt-dlp supporting many runtimes
 cp %{SOURCE1} yt_dlp_ejs/yt/solver/core.min.js
 cp %{SOURCE2} yt_dlp_ejs/yt/solver/lib.min.js
 
+sed -i '/tool.hatch.build.targets.wheel.hooks.custom/,/^$/d' pyproject.toml
+
 %build
 %py_build
 
