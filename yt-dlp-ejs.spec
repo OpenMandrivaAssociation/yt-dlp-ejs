@@ -17,8 +17,7 @@ BuildRequires:  pkgconfig(python3)
 BuildRequires:  python3dist(pip)
 BuildRequires:  python3dist(hatch-vcs)
 BuildRequires:  python3dist(hatchling)
-#BuildRequires:  (quickjs or quikcjs-ng or deno or bun or nodejs)
-BuildRequires:	quickjs
+BuildRequires:  (quickjs or quikcjs-ng or deno or bun or nodejs)
 # Recommended is deno but is rust based and currently not packaged for OMV, so lets pick at first quickjs
 Requires:  (quickjs or quickjs-ng or deno or bun or nodejs)
 
@@ -41,3 +40,6 @@ sed -i '/tool.hatch.build.targets.wheel.hooks.custom/,/^$/d' pyproject.toml
 %py_install
 
 %files
+%{python_sitelib}/yt_dlp_ejs-%{version}.dist-info
+%{python_sitelib}/yt_dlp_ejs/
+
