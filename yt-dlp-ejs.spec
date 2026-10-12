@@ -1,10 +1,11 @@
 Name:           yt-dlp-ejs
 # Keep in sync with https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/pyproject.toml#L59
 Version:        0.8.0
-Release:        1
+Release:        2
 Summary:        External JavaScript for yt-dlp supporting many runtimes
 
 License:        Unlicense license, MIT AND ISC
+Group:        Development/Other
 URL:            https://github.com/yt-dlp/ejs
 # Remember to also update source1 and source2 each time
 Source0:	https://github.com/yt-dlp/ejs/releases/download/%{version}/yt_dlp_ejs-%{version}.tar.gz
@@ -34,6 +35,9 @@ cp %{SOURCE2} yt_dlp_ejs/yt/solver/lib.min.js
 sed -i '/tool.hatch.build.targets.wheel.hooks.custom/,/^$/d' pyproject.toml
 
 %build
+# The sdist is not a git checkout, so the versioning backend needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
+
 %py_build
 
 %install
